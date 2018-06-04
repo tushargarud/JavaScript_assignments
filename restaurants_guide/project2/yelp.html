@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- Student Name:  Tushar Garud -->
+<html lang="en">
+	<head>		
+		<link rel="stylesheet" type="text/css" href="yelp.css">	
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Web Mashup: Display Best Restaurants on a Map</title>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTC-jqYi9PocAORhx-3uZZPYn50dgp5O4&callback=initMap" async defer></script>
+		<script type="text/javascript" src="yelp.js"></script>
+	</head>
+	<body onload="initialize();">
+		<div id="headertext" class="headerrow">
+			<h2>Web Mashup: Display Best Restaurants on a Map</h2>
+		</div>
+		<div id="searchBox" class="largerow">
+			<form>
+				<label class="largefont">Search Terms: <input type="text" id="search" size="50" class="largefont"/></label>
+				<input type="button" onclick="sendRequest();" value="Find" class="largefont"/>
+			</form>
+		</div>
+		<div id="map" class="mapwindow"></div>
+		<div id="output" class="outputpane"></div>    
+	</body>
+</html>

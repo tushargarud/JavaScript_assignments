@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <title>Display Movie Information</title>
+		<meta charset="utf-8"/>
+		<script type="text/javascript" src="movies.js"></script>
+		<link rel="stylesheet" type="text/css" href="movies.css">		
+	</head>
+	<body style="position:absolute;top:0px;left:0px;right:0px;bottom:0px;" onload="initialize();">
+		<div class="container">
+			<header>
+				<h1>THE MOVIE DATABASE</h1>
+			</header>
+			<section>
+					<h3>Search movie</h3>
+				    <form>
+					   <label>Movie title: &nbsp <input type="text" id="form-input"/></label> &nbsp &nbsp
+					   <input type="button" onclick="sendRequest(displaySearchResults,'/3/search/movie','&query='+document.getElementById('form-input').value);" value="Display Info"/>
+					</form>
+			</section>
+			<nav>
+				<div id="pages">&nbsp;</div>
+				<div id="output">&nbsp;</div>
+			</nav>
+			<article id="details">
+				<div id="movieDetails">&nbsp;</div>
+			</article>
+			<aside id="cast">
+				<div id="movieCast">&nbsp;</div>
+			</aside>
+		</div>
+	</body>
+</html>
